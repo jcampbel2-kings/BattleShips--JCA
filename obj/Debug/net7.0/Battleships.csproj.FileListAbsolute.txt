@@ -1,0 +1,14 @@
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\bin\Debug\net7.0\Battleships.exe
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\bin\Debug\net7.0\Battleships.deps.json
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\bin\Debug\net7.0\Battleships.runtimeconfig.json
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\bin\Debug\net7.0\Battleships.dll
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\bin\Debug\net7.0\Battleships.pdb
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.GeneratedMSBuildEditorConfig.editorconfig
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.AssemblyInfoInputs.cache
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.AssemblyInfo.cs
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.csproj.CoreCompileInputs.cache
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.dll
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\refint\Battleships.dll
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.pdb
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\Battleships.genruntimeconfig.cache
+\\kings.internal\Staff$\j.campbell\Documents\C# Projects\Battleships\obj\Debug\net7.0\ref\Battleships.dll
