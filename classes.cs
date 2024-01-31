@@ -194,12 +194,14 @@ namespace Battleships
 
         private bool ValidCoordinates((int x, int y)[] coordinates){
             bool rval=true;
+            //check coordinates in valid range
             foreach ((int x, int y) coordinate in coordinates){
                 if (!ValidCoordinate(coordinate)){
                     rval=false;
                     break;
                 }  
             }
+            //check if coordinates are adjacent to each other
             return rval;
         }
 
@@ -240,14 +242,33 @@ namespace Battleships
             return boardData;
         }
 
-        public bool PlaceShip(int shipNumber, (int x, int y)[] coordinates ){
+        private (int x, int y)[] CreateCoordinateSet(int size, (int x, int y) startCoord, char orientation){
+            (int x, int y)[] coordinates= new (int x, int y)[size];
+            for (int i=0; i<size; i++){
+                if (orientation=='v'){
+                    coordinates[i]=(startCoord.x, startCoord.y+i );    
+                } else if (orientation=='h') {
+                    coordinates[i]=(startCoord.x+i, startCoord.y );
+                } else {
+                    coordinates[i]=(startCoord.x, startCoord.y );
+                }
+            }
+            return coordinates;
+        }
+
+        public bool PlaceShip(int shipNumber, (int x, int y) startCoord, char orientation ){
             bool areaClear=true;
             bool rval;
+            int shipSize=ships[shipNumber].Size;
+            //convert start coordinates and orientation into actual coordinates
+            (int x, int y)[] coordinates=CreateCoordinateSet(shipSize,startCoord,orientation);
+            //make sure calculated coordinates are still on valid board
             if (!ValidCoordinates(coordinates)){
                 rval=false;
             } else {
+                //check if entire area required is free of other ships
                 for (int i=0; i<coordinates.Length; i++){
-                    if (board[coordinates[i].x,coordinates[i].x ]!=Empty ){
+                    if (board[coordinates[i].x,coordinates[i].y ]!=Empty ){
                         areaClear=false;
                     }
                 }
@@ -256,7 +277,9 @@ namespace Battleships
                     msg="Ship cant be placed here as partly occupied";
                     rval=false;
                 } else {
+                    //set ship location in ship object
                     if (ships[shipNumber].Place(coordinates)) {
+                        //update board array with ship data
                         foreach ((int x, int y)coordinate in coordinates){
                             board[coordinate.x, coordinate.y]=ShipNotHit;
                         }
